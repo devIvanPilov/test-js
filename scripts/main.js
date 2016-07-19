@@ -1,16 +1,13 @@
-var clozeAnswer = document.getElementById('cloze1').value;
-var checkAnswer = document.getElementsByClassName('btn');
+var clozeAnswer = document.getElementById('cloze1');
+var checkAnswer = document.getElementById('checkButton');
 var answerText = document.getElementById('message');
 
 checkAnswer.addEventListener('click', check);
 
-
 function check(){
-  if (clozeAnswer.value == 'fill in'){
-    answerText.innerHTML = 'Correct!';
-    answerText.style.color = 'green';
-  } else {
-    answerText.innerHTML = 'Wrong!';
-    answerText.style.color = 'red';
+  if(clozeAnswer.value == 'fill in'){
+      answerText.innerHTML = "Correct!";
+    } else {
+      answerText.innerHTML = "Oops!";
+    }
   }
-}
